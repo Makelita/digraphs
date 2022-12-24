@@ -33,6 +33,7 @@ const Home = ({ textInfo, setTextInfo }) => {
 
   return (
     <div className="home">
+        <h1>Digraph</h1>
       <form onSubmit={handleSubmit}>
         <textarea
           placeholder="past text here."
