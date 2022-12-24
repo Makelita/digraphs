@@ -1,0 +1,59 @@
+
+.home{    
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+   flex-direction: column;
+   background-color: #e6f3eb;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  textarea {
+    width: 64rem;
+    height: 40rem;
+    resize: none;
+    border: .05rem solid #50848e;
+    border-radius: .3rem;
+    padding: 2rem;
+  
+  }
+
+
+  .submitDiv {
+    display: flex;
+    justify-content: space-between;
+ 
+    
+
+  }
+
+  .submitDiv p {
+    font-size: 1.2rem;
+    margin-top: .8rem;
+  }
+
+  button {
+    margin-top: 2rem;
+    width: 12rem;
+    height: 4rem;
+    border-radius: .3rem;
+    align-self: flex-end;
+    background-color:#a9c4b3;
+    border-color:#a9c4b3;
+    color: aliceblue;
+    font-weight: bold;
+    cursor:pointer ;
+  }
+
+  ::placeholder{
+   color: rgb(204, 204, 204);
+   font-size: 1.2rem;
+  }
+
+  

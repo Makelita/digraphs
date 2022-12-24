@@ -1,0 +1,20 @@
+
+
+.read{
+    min-height: 100vh;
+    color: rgb(0, 0, 0);
+    background-color: rgb(252, 246, 238);
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+    flex-direction: column;
+    padding: 15rem 0;
+}
+
+.textInfo{
+    width: 62rem;
+    font-size: 2rem;
+    font-family:'Libre+Baskerville' ;
+    line-height: 2;
+    text-align: justify;
+}
