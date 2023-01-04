@@ -1,6 +1,4 @@
 import "./home.css";
-import reactStringReplace from "react-string-replace";
-import digraphs from "../Info";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 

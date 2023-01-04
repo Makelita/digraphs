@@ -1,42 +1,65 @@
-import "./read.css"
-import { useEffect } from "react"
-import digraphs from "../Info"
-import reactStringReplace from "react-string-replace"
+import "./read.css";
+import { useEffect, useState } from "react";
+import digraphs from "../Info";
+import reactStringReplace from "react-string-replace";
 import { useNavigate } from "react-router-dom";
+import Setting from "./Setting";
+import settingImg from "../images/settings.svg";
 
-const Read = ({textInfo, setTextInfo }) => {
+const Read = ({ textInfo, setTextInfo, settingMenu, setSettingMenu, checkedBox}) => {
+ 
 
-    const navigate = useNavigate();
-// Take the data from textInfo than change the color of the digraphs founded in the text.
-    useEffect (() => {
-        const letters = () => {
-            let text = textInfo;
-        
-            for (let item in digraphs) {
-                text = reactStringReplace(text, `${item}`, (match, i) => (
-                  <span style={{ color: `${digraphs[item]}`, fontWeight:'bolder' }}>{match}</span>
-                ));
-              }
-              setTextInfo(text)
-        }
+  const navigate = useNavigate();
+  // Take the data from textInfo than change the color of the digraphs founded in the text.
 
-        letters()
-
-        if(textInfo.length===0){
-            navigate("/")
-        }
-    },[])
+  let reading = checkedBox.join(" ")
+  
 
 
+  useEffect(() => {
+
+    const letters = () => {
+      let text = textInfo;
+
+      if(reading.includes("all") ){ 
+        for (let item in digraphs) {
+            text = reactStringReplace(text, `${item}`, (match, i) => (
+              <span style={{ color: `${digraphs[item]}`, fontWeight: "bolder" }}>
+                {match}
+              </span>
+            ));
+          }
+      } 
+
+      setTextInfo(text);
+    };
+
+    letters();
+
+    if (textInfo.length === 0) {
+      navigate("/");
+    }
+  },[checkedBox]);
 
 
 
-    return (
-        <div className="read">
-            <p className="textInfo">{textInfo}</p>
-        </div>
-    )
 
-}
+  const handleSetting = ( ) => {
+    setSettingMenu(!settingMenu)
+    
+  }
+  
 
-export default Read
+
+
+  return (
+    <div className="read">
+      <div className="settingIcon" onClick={handleSetting}>
+        <img src={settingImg} alt="" />
+      </div>
+      <p className="textInfo">{textInfo}</p>
+    </div>
+  );
+};
+
+export default Read;

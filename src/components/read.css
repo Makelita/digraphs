@@ -5,11 +5,23 @@
     color: rgb(0, 0, 0);
     background-color: rgb(252, 246, 238);
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items:  center;
     flex-direction: column;
-    padding: 15rem 0;
+
 }
+
+.settingIcon {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    z-index: 3;
+    cursor: pointer;
+    position: fixed;
+
+    }
 
 .textInfo{
     width: 62rem;
@@ -17,4 +29,5 @@
     font-family:'Libre+Baskerville' ;
     line-height: 2;
     text-align: justify;
+    padding: 15rem 0;
 }

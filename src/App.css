@@ -8,17 +8,13 @@
 
 html {
   font-size: 62.5%;
-  background-color: #D2D4D3;
 }
 
 
 .App {
+  width: 100vw;
   max-width: 144rem;
-  min-width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items:  center;
- flex-direction: column;
+  position: relative;
+ /* overflow-X: hidden; */
 }
 
