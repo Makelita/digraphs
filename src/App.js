@@ -9,6 +9,9 @@ function App() {
   const [textInfo, setTextInfo] = useState([]);
   const [settingMenu, setSettingMenu] = useState(false);
   const [checkedBox, setCheckedBox] = useState([ ])
+  const [list, setList] = useState(["all"])
+ 
+ 
 
   return (
     <div className="App">
@@ -20,10 +23,10 @@ function App() {
           />
           <Route
             path="/read"
-            element={<Read textInfo={textInfo} setTextInfo={setTextInfo} settingMenu={settingMenu} setSettingMenu={setSettingMenu} checkedBox={checkedBox} />}
+            element={<Read textInfo={textInfo} setTextInfo={setTextInfo} settingMenu={settingMenu} setSettingMenu={setSettingMenu} checkedBox={checkedBox} list={list} setList={setList} />}
           />
         </Routes>
-        <Setting settingMenu={settingMenu} checkedBox={checkedBox} setCheckedBox={setCheckedBox}/>
+        <Setting settingMenu={settingMenu} checkedBox={checkedBox} setCheckedBox={setCheckedBox} list={list} setList={setList}/>
       </Router>
     </div>
   );
