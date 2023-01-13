@@ -31,21 +31,23 @@ const Home = ({ textInfo, setTextInfo }) => {
 
   return (
     <div className="home">
-        <h1>Digraphs</h1>
+      <h1>Digraphs</h1>
       <form onSubmit={handleSubmit}>
         <textarea
           placeholder="past text here."
           onChange={handleChange}
         ></textarea>
         <div className="submitDiv">
-          {/* {error ? (
-            <p style={{ color: "#BB5942", fontStyle: "italic" }}>
-              {" "}
-              Please enter some text
-            </p>
-          ) : <p></p>} */}
-          <p style={{visibility: error ? null: 'hidden', color: "#BB5942", fontStyle: "italic" }}>Please enter some text</p>
-          <button  type="submit">Submit</button>
+          <p
+            style={{
+              visibility: error ? null : "hidden",
+              color: "#BB5942",
+              fontStyle: "italic",
+            }}
+          >
+            Please enter some text
+          </p>
+          <button type="submit">Submit</button>
         </div>
       </form>
     </div>

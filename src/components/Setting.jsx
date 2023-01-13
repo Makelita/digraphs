@@ -11,6 +11,7 @@ const [sc, setSc] = useState (false)
 const [th, setTh] = useState (false)
 const [all, setall] = useState (false)
 
+
 const handelbl = (e) => {
   setCheckedBox( () => {
     if(checkedBox.includes(e.target.textContent)){

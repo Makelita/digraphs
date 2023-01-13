@@ -37,6 +37,10 @@ const digraphs = {
     wr: "#AA8039",
   };
 
+ 
+
+
+
   // const trigraphs = ["nth", "sch", "scr", "shr", "spl", "spr", "squ", "str", "thr" “tch”] 
 
   export default digraphs

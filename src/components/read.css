@@ -11,6 +11,13 @@
 
 }
 
+/* nav {
+    height: 9rem;
+    width: 100%;
+    background-color: rgb(177, 134, 78);
+    position:fixed;
+ } */
+
 .settingIcon {
     display: flex;
     justify-content: flex-end;
@@ -23,9 +30,16 @@
 
     }
 
+
+
+.text-wrapper{
+    width:80vw ;
+    max-width: 62rem;
+
+}
 .textInfo{
-    width: 62rem;
-    font-size: 2rem;
+
+    font-size: 1.5rem;
     font-family:'Libre+Baskerville' ;
     line-height: 2;
     text-align: justify;

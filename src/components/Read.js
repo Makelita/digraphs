@@ -18,15 +18,14 @@ const Read = ({
   // Take the data from textInfo than change the color of the digraphs founded in the text.
 let cleanText = textInfo
 
+
+
   useEffect(() => {
     const letters = () => {
-      let text = textInfo;
- 
+      let text = cleanText;
       setTextInfo(text);
     };
-
     letters();
-
     if (textInfo.length === 0) {
       navigate("/");
     }
@@ -36,12 +35,10 @@ let cleanText = textInfo
 
   useEffect(() => {
     const handleList = () => {
-
       setList(() => {
         let current;
         current = checkedBox.join(" ");
         current = current.split(" ");
-        console.log(checkedBox.join(" ").split(" "))
         if( checkedBox.includes("all")){
           current = [ "bl", "br", "ch", "ck", "cl", "cr", "dr", "fl", "fr", "gh", "gl", "gr", "kn", "ld","ng", "nd", "nk", "ph", "pl", "pr", "qu", "sc", "sh", "sk", "sl", "sm", "sn", "sp", "ss", "st", "sw", "th", "tr", "tw", "wh", "wr"]
         }
@@ -73,10 +70,15 @@ let cleanText = textInfo
 
   return (
     <div className="read">
-      <div className="settingIcon" onClick={handleSetting}>
+    <nav>
+    <div className="settingIcon" onClick={handleSetting}>
         <img src={settingImg} alt="" />
       </div>
-      <p className="textInfo">{list.length < 0? textInfo: list}</p>
+
+    </nav>
+
+      <div className="text-wrapper"><p className="textInfo">{list.length < 0? textInfo: list}</p></div>
+      
     </div>
   );
 };

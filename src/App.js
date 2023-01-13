@@ -26,7 +26,7 @@ function App() {
             element={<Read textInfo={textInfo} setTextInfo={setTextInfo} settingMenu={settingMenu} setSettingMenu={setSettingMenu} checkedBox={checkedBox} list={list} setList={setList} />}
           />
         </Routes>
-        <Setting settingMenu={settingMenu} checkedBox={checkedBox} setCheckedBox={setCheckedBox} list={list} setList={setList}/>
+        <Setting settingMenu={settingMenu} checkedBox={checkedBox} setCheckedBox={setCheckedBox}/>
       </Router>
     </div>
   );
